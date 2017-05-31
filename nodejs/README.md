@@ -15,6 +15,12 @@ Teambition API - Nodejs 调用事例
 - 删除日程
 - 删除项目
 
+## 运行
+
+`npm install`或`yarn install`
+
+`node app`, 然后访问: http://localhost:3000/auth
+
 ## 更多接口
 
 [Teambition API](https://docs.teambition.com)
