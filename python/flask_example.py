@@ -73,7 +73,7 @@ def callback():
     
     # 邀请新成员到项目
     members = tb.post('/projects/%s/members' % project['_id'], 
-        json={'email': 'junqi@teambition.com' })
+        json={'email': 'teambition@teambition.com' })
 
     # 移除成员
     tb.delete('/members/%s' % members[0]['_memberId'])
