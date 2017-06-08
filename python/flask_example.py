@@ -42,7 +42,7 @@ def callback():
     tb.set_token(access_token)
 
     # 创建一个项目
-    project = tb.post('/projects', json={'name': '事例项目 by api'})
+    project = tb.post('/projects', json={'name': '示例项目 by api'})
 
     # 获取项目的任务列表
     tasklists = tb.get('/projects/%s/tasklists' % project["_id"])
@@ -52,7 +52,7 @@ def callback():
         '_projectId': project["_id"],
         '_tasklistId': tasklists[0]['_id'],
         '_stageId': tasklists[0]['hasStages'][0]['_id'],
-        'content': '事例任务 by api'
+        'content': '示例任务 by api'
     })
 
     # 完成任务
@@ -60,8 +60,8 @@ def callback():
 
     # 创建日程
     event = tb.post('/events', json={
-        'title': '事例日程标题 by api',
-        'content': '事例日程备注 by api',
+        'title': '示例日程标题 by api',
+        'content': '示例日程备注 by api',
         'startDate': '2017-06-01T14:50:15.035Z',
         'endDate': '2017-06-05T18:00:00.035Z',
         '_projectId': project['_id']
@@ -69,7 +69,7 @@ def callback():
 
     # 更新日程的标题
     tb.put('/events/%s' % event['_id'], 
-        json={'title': '新事例日程标题 by api'})
+        json={'title': '新示例日程标题 by api'})
     
     # 邀请新成员到项目
     members = tb.post('/projects/%s/members' % project['_id'], 
