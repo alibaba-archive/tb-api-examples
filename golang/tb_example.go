@@ -134,7 +134,7 @@ func handleTBCallback(w http.ResponseWriter, r *http.Request) {
 		log.Println("项目创建失败:", err.Error())
 	}
 	log.Println("项目ID: ", pid, " 创建成功!")
-	//添加用户test@qq.com
+	//添加用户test@teambition.com
 	err = addProjectMember(res.AccessToken, pid)
 	if err != nil {
 		log.Println("邀请成员失败:", err.Error())
