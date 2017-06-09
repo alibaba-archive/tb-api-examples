@@ -24,7 +24,7 @@ router.get('/tb/callback', sdk.authCoCallback(CLIENT_ID, CLIENT_SECRET), functio
     sdk.token = tbCallbackBody.access_token
 
     // 创建一个项目
-    let project = yield sdk.post('/projects', { name: '事例项目 by api' })
+    let project = yield sdk.post('/projects', { name: '示例项目 by api' })
 
     // 获取项目的任务列表
     let tasklists = yield sdk.get(`/projects/${project._id}/tasklists`)
@@ -34,7 +34,7 @@ router.get('/tb/callback', sdk.authCoCallback(CLIENT_ID, CLIENT_SECRET), functio
       _projectId: project._id,
       _tasklistId: tasklists[0]._id,
       _stageId: tasklists[0].hasStages[0]._id,
-      content: '事例任务 by api'
+      content: '示例任务 by api'
     })
 
     // 完成任务
@@ -42,15 +42,15 @@ router.get('/tb/callback', sdk.authCoCallback(CLIENT_ID, CLIENT_SECRET), functio
 
     // 创建日程
     let event = yield sdk.post('/events', {
-      title: '事例日程标题 by api',
-      content: '事例日程备注 by api',
+      title: '示例日程标题 by api',
+      content: '示例日程备注 by api',
       startDate: new Date(2017, 5, 1),
       endDate: new Date(2017, 5, 4),
       _projectId: project._id
     })
 
     // 更新日程的标题
-    yield sdk.put(`/events/${event._id}`, { title: '新事例日程标题 by api' })
+    yield sdk.put(`/events/${event._id}`, { title: '新示例日程标题 by api' })
 
     // 邀请新成员到项目
     let members = yield sdk.post(`/projects/${project._id}/members`, { email: 'teambition@teambition.com' })
