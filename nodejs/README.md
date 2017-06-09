@@ -1,9 +1,9 @@
-Teambition API - Nodejs 调用事例
+Teambition API - Nodejs 调用示例
 ================================
 
-## 事例内容
+## 示例内容
 
-该事例中，包含以下接口调用
+该示例中，包含以下接口调用
 - 创建项目
 - 创建任务
 - 完成任务
@@ -19,7 +19,7 @@ Teambition API - Nodejs 调用事例
 
 `npm install`或`yarn install`
 
-`node app`, 然后访问: http://localhost:3000/auth
+`npm start`, 然后访问: http://localhost:3000/auth
 
 ## 更多接口
 
