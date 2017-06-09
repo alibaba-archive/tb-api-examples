@@ -18,7 +18,7 @@ Teambition API - Golang 调用事例
 
 `glide install`
 
-`go run tb_example.go`, 然后访问: http://localhost:3000/auth
+`go run src/app.go`, 然后访问: http://localhost:3000/auth
 
 ## 更多接口
 
