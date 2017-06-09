@@ -1,0 +1,306 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Teambition Demo",
+		"_postman_id": "b253e64e-a993-20c7-8ac6-8f81fb8be6c3",
+		"description": "Teambition API Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "创建项目",
+			"request": {
+				"url": "https://www.teambition.com/api/projects",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "OAuth2 abcdefg",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"示例项目\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "获取项目任务列表",
+			"request": {
+				"url": "https://www.teambition.com/api/projects/_projectid_/tasklists",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "OAuth2 abcdefg",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "创建任务",
+			"request": {
+				"url": "https://www.teambition.com/api/tasks",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "OAuth2 abcdefg",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"_projectId\": \"_projectid_\",\n  \"_tasklistId\": \"_tasklistid_\",\n  \"_stageId\": \"_stageid_\",\n  \"content\": \"示例任务\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "完成任务",
+			"request": {
+				"url": "https://www.teambition.com/api/tasks/_taskid_/isDone",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "OAuth2 abcdefg",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"isDone\": true\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "创建日程",
+			"request": {
+				"url": "https://www.teambition.com/api/events",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "OAuth2 abcdefg",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"示例日程标题\",\n    \"content\": \"示例日程备注\",\n    \"startDate\": \"2017-05-31T16:00:00.000Z\",\n    \"endDate\": \"2017-06-01T16:00:00.000Z\",\n    \"_projectId\": \"_projectid_\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "更新日程标题",
+			"request": {
+				"url": "https://www.teambition.com/api/events/_eventid_",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "OAuth2 abcdefg",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"示例日程标题\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "邀请新成员到项目",
+			"request": {
+				"url": "https://www.teambition.com/api/projects/_projectid_/members",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "OAuth2 abcdefg",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n  \"email\": \"teambition@teambition.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "移除成员",
+			"request": {
+				"url": "https://www.teambition.com/api/members/_memberid_",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "OAuth2 abcdefg",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "删除日程",
+			"request": {
+				"url": "https://www.teambition.com/api/events/_eventid_",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "OAuth2 abcdefg",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "删除任务",
+			"request": {
+				"url": "https://www.teambition.com/api/tasks/_taskid_",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "OAuth2 abcdefg",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "删除项目",
+			"request": {
+				"url": "https://www.teambition.com/api/projects/_projectid_",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "OAuth2 abcdefg",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "获取accesstoken",
+			"request": {
+				"url": "https://account.teambition.com/oauth2/access_token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"client_id\":\"c9c44aa0-45f8-11e7-85e5-25300cc3a657\",\n\t\"client_secret\":\"e297f011-ea56-4421-8be9-6477933e1591\",\n\t\"code\":\"xxx\",\n}"
+				},
+				"description": "通过client_id,client_secret,code获取access_token\ncode需通过get https://account.teambition.com/oauth2/authorize 来获取"
+			},
+			"response": []
+		}
+	]
+}

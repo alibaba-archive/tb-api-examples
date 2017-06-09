@@ -1,0 +1,5 @@
+package: authtest
+import:
+- package: github.com/DavidCai1993/request
+  version: 1.6.0
+- package: golang.org/x/oauth2
