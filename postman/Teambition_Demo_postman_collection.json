@@ -296,7 +296,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"client_id\":\"c9c44aa0-45f8-11e7-85e5-25300cc3a657\",\n\t\"client_secret\":\"e297f011-ea56-4421-8be9-6477933e1591\",\n\t\"code\":\"xxx\",\n}"
+					"raw": "{\n\t\"client_id\":\"xxx\",\n\t\"client_secret\":\"xxxxx\",\n\t\"code\":\"xxx\",\n}"
 				},
 				"description": "通过client_id,client_secret,code获取access_token\ncode需通过get https://account.teambition.com/oauth2/authorize 来获取"
 			},
