@@ -12,8 +12,8 @@
 ## Useful attributes
 
 ```
-CLIENT_ID = 'c9c44aa0-45f8-11e7-85e5-25300cc3a657'
-CLIENT_SECRET = 'e297f011-ea56-4421-8be9-6477933e1591'
+CLIENT_ID = 'xxxxxx'
+CLIENT_SECRET = 'xxxxxx'
 REDIRECT_URI = 'http://localhost:3000/tb/callback'
 API_HOST = 'https://www.teambition.com/api'
 ACCOUNT_HOST = 'https://account.teambition.com'

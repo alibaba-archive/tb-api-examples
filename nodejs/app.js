@@ -7,8 +7,8 @@ const app = module.exports = new Koa()
 
 let sdk = new Teambition()
 
-const CLIENT_ID = 'c9c44aa0-45f8-11e7-85e5-25300cc3a657'
-const CLIENT_SECRET = 'e297f011-ea56-4421-8be9-6477933e1591'
+const CLIENT_ID = 'xxxxxx'
+const CLIENT_SECRET = 'xxxxxx'
 const REDIRECT_URI = 'http://localhost:3000/tb/callback'
 
 // 跳转至授权地址

@@ -9,8 +9,8 @@ app.config.update(
     SERVER_NAME = 'localhost:3000'
 )
 
-CLIENT_ID = 'c9c44aa0-45f8-11e7-85e5-25300cc3a657'
-CLIENT_SECRET = 'e297f011-ea56-4421-8be9-6477933e1591'
+CLIENT_ID = 'xxxxxx'
+CLIENT_SECRET = 'xxxxxx'
 
 
 tb = Teambition(CLIENT_ID, CLIENT_SECRET)

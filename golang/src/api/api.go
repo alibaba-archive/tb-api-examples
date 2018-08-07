@@ -19,8 +19,8 @@ const htmlIndex = `<html><body>
 
 //OauthCfg ...
 var OauthCfg = &oauth2.Config{
-	ClientID:     "c9c44aa0-45f8-11e7-85e5-25300cc3a657",
-	ClientSecret: "e297f011-ea56-4421-8be9-6477933e1591",
+	ClientID:     "xxxxxx",
+	ClientSecret: "xxxxxx",
 	RedirectURL:  "http://localhost:3000/tb/callback",
 	Endpoint: oauth2.Endpoint{
 		AuthURL:  "https://account.teambition.com/oauth2/authorize",
